@@ -1,0 +1,4 @@
+app/.env
+.gitignore
+readme.md
+Makefile
