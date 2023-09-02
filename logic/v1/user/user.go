@@ -24,8 +24,8 @@ func Register(user *userRepository.User) (*userRepository.User, error) {
 		return nil, errors.New("a user with this email address already exists")
 	}
 
-	user.Role = primer.Customer
-	user.Active = true
+	user.Role = primer.User
+	user.Active = false
 
 	// create user
 	if err := user.Create(); err != nil {

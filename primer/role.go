@@ -7,5 +7,5 @@ const (
 
 	Admin
 
-	Customer
+	User
 )

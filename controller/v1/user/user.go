@@ -12,15 +12,17 @@ func Register(w http.ResponseWriter, r *http.Request) {
 
 	var data userRepository.User
 	if err := barf.Request(r).Body().Format(&data); err != nil {
+		barf.Logger().Errorf(`[user.Register] [barf.Request(r).Body().Format(&data)] %s`, err.Error())
 		barf.Response(w).Status(http.StatusBadRequest).JSON(barf.Res{
 			Status:  false,
-			Message: err.Error(),
+			Message: "We could not process your request at this time. Please try again later.",
 		})
 		return
 	}
 
 	user, err := userLogic.Register(&data)
 	if err != nil {
+		barf.Logger().Errorf(`[user.Register] [userLogic.Register(&data)] %s`, err.Error())
 		barf.Response(w).Status(http.StatusBadRequest).JSON(barf.Res{
 			Status:  false,
 			Message: err.Error(),
@@ -31,6 +33,6 @@ func Register(w http.ResponseWriter, r *http.Request) {
 	barf.Response(w).Status(http.StatusCreated).JSON(barf.Res{
 		Status:  true,
 		Data:    user,
-		Message: "user created successfully",
+		Message: "Registration successful.",
 	})
 }
