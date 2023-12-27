@@ -1,2 +1,3 @@
 bin
 app/.env
+.env

@@ -17,6 +17,8 @@ github.com/opensaucerer/barf v1.0.7 h1:7LkmaMT45iYm64p9/d2ZWtST8C5wPdm1BoMIROpz2
 github.com/opensaucerer/barf v1.0.7/go.mod h1:4pB3OXDTf7k48VNA97MSmtryc+QzsDTBJS2PV/hEcqI=
 github.com/opensaucerer/barf v1.0.8 h1:Ug9ds6D7vR8tQMcub8Kh44EZDs5zg1ZFMVmpMVrYYdg=
 github.com/opensaucerer/barf v1.0.8/go.mod h1:4pB3OXDTf7k48VNA97MSmtryc+QzsDTBJS2PV/hEcqI=
+github.com/opensaucerer/barf v1.1.1 h1:MY3LJhDln1JyErs8Wg0/2y5hHXANr8ohwbh9qxnEOLM=
+github.com/opensaucerer/barf v1.1.1/go.mod h1:4pB3OXDTf7k48VNA97MSmtryc+QzsDTBJS2PV/hEcqI=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=

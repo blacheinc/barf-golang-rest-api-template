@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/blacheinc/pixel/database"
+	"github.com/blacheinc/pixel/database/migration"
 	"github.com/blacheinc/pixel/primer"
 	"github.com/blacheinc/pixel/version"
 	"github.com/opensaucerer/barf"
@@ -43,6 +44,10 @@ func main() {
 	if err := database.NewPostgreSQLConnection(primer.ENV.PostgreSQLURI, primer.ENV.PostgreSQLConnections, primer.ENV.PostgreSQLDebug); err != nil {
 		barf.Logger().Error(err.Error())
 		os.Exit(1)
+	}
+
+	if err := migration.CreateTables(); err != nil {
+		barf.Logger().Fatalf(`[main.main] [migration.CreateTables()] %s`, err.Error())
 	}
 
 	// if err := database.ReadFileAndExecuteQueries(primer.ENV.SQLFilePath); err != nil {
